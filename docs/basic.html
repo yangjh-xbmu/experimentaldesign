@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>第 2 章 Bookdown 的基本用法 | 实验研究的设计及分析</title>
+  <meta name="description" content="介绍Bookdown的使用，记录遇到的问题及解决办法。" />
+  <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="第 2 章 Bookdown 的基本用法 | 实验研究的设计及分析" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="介绍Bookdown的使用，记录遇到的问题及解决办法。" />
+  <meta name="github-repo" content="yangjh-xbmu/experimentaldesign" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="第 2 章 Bookdown 的基本用法 | 实验研究的设计及分析" />
+  
+  <meta name="twitter:description" content="介绍Bookdown的使用，记录遇到的问题及解决办法。" />
+  
+
+<meta name="author" content="杨志宏" />
+
+
+<meta name="date" content="2019-12-01" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="howtodo.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">bookdown使用</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> 实验设计概述</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#实验设计发展趋势"><i class="fa fa-check"></i><b>1.1</b> 实验设计发展趋势</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="intro.html"><a href="intro.html#实验室研究"><i class="fa fa-check"></i><b>1.1.1</b> 实验室研究</a></li>
+<li class="chapter" data-level="1.1.2" data-path="intro.html"><a href="intro.html#社会研究"><i class="fa fa-check"></i><b>1.1.2</b> 社会研究</a></li>
+<li class="chapter" data-level="1.1.3" data-path="intro.html"><a href="intro.html#多因素实验设计的特点"><i class="fa fa-check"></i><b>1.1.3</b> 多因素实验设计的特点</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#实验设计中的基本概念"><i class="fa fa-check"></i><b>1.2</b> 实验设计中的基本概念</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="intro.html"><a href="intro.html#因素与因素实验设计"><i class="fa fa-check"></i><b>1.2.1</b> 因素与因素实验设计</a></li>
+<li class="chapter" data-level="1.2.2" data-path="intro.html"><a href="intro.html#处理与处理水平的结合"><i class="fa fa-check"></i><b>1.2.2</b> 处理与处理水平的结合</a></li>
+<li class="chapter" data-level="1.2.3" data-path="intro.html"><a href="intro.html#主效应与交互作用"><i class="fa fa-check"></i><b>1.2.3</b> 主效应与交互作用</a></li>
+<li class="chapter" data-level="1.2.4" data-path="intro.html"><a href="intro.html#简单效应"><i class="fa fa-check"></i><b>1.2.4</b> 简单效应</a></li>
+<li class="chapter" data-level="1.2.5" data-path="intro.html"><a href="intro.html#处理效应和误差变异"><i class="fa fa-check"></i><b>1.2.5</b> 处理效应和误差变异</a></li>
+<li class="chapter" data-level="1.2.6" data-path="intro.html"><a href="intro.html#嵌套"><i class="fa fa-check"></i><b>1.2.6</b> 嵌套</a></li>
+<li class="chapter" data-level="1.2.7" data-path="intro.html"><a href="intro.html#方差分析"><i class="fa fa-check"></i><b>1.2.7</b> 方差分析</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#实验中各种变异的控制"><i class="fa fa-check"></i><b>1.3</b> 实验中各种变异的控制</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="intro.html"><a href="intro.html#使系统变异的效应最大"><i class="fa fa-check"></i><b>1.3.1</b> 使系统变异的效应最大</a></li>
+<li class="chapter" data-level="1.3.2" data-path="intro.html"><a href="intro.html#控制无关变异"><i class="fa fa-check"></i><b>1.3.2</b> 控制无关变异</a></li>
+<li class="chapter" data-level="1.3.3" data-path="intro.html"><a href="intro.html#使误差变异最小"><i class="fa fa-check"></i><b>1.3.3</b> 使误差变异最小</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#实验设计的分类"><i class="fa fa-check"></i><b>1.4</b> 实验设计的分类</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="intro.html"><a href="intro.html#完全随机随机区组和拉丁方实验设计"><i class="fa fa-check"></i><b>1.4.1</b> 完全随机、随机区组和拉丁方实验设计</a></li>
+<li class="chapter" data-level="1.4.2" data-path="intro.html"><a href="intro.html#单因素和多因素实验设计"><i class="fa fa-check"></i><b>1.4.2</b> 单因素和多因素实验设计</a></li>
+<li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#被试间被试内和混合实验设计"><i class="fa fa-check"></i><b>1.4.3</b> 被试间、被试内和混合实验设计</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="basic.html"><a href="basic.html"><i class="fa fa-check"></i><b>2</b> Bookdown 的基本用法</a><ul>
+<li class="chapter" data-level="2.1" data-path="basic.html"><a href="basic.html#使用bookdown创作的流程"><i class="fa fa-check"></i><b>2.1</b> 使用bookdown创作的流程</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="basic.html"><a href="basic.html#初始化"><i class="fa fa-check"></i><b>2.1.1</b> 初始化</a></li>
+<li class="chapter" data-level="2.1.2" data-path="basic.html"><a href="basic.html#编辑内容"><i class="fa fa-check"></i><b>2.1.2</b> 编辑内容</a></li>
+<li class="chapter" data-level="2.1.3" data-path="basic.html"><a href="basic.html#预览内容"><i class="fa fa-check"></i><b>2.1.3</b> 预览内容</a></li>
+<li class="chapter" data-level="2.1.4" data-path="basic.html"><a href="basic.html#发布"><i class="fa fa-check"></i><b>2.1.4</b> 发布</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="basic.html"><a href="basic.html#bookdown-对文档的组织"><i class="fa fa-check"></i><b>2.2</b> bookdown 对文档的组织</a></li>
+<li class="chapter" data-level="2.3" data-path="basic.html"><a href="basic.html#bookdown-语法"><i class="fa fa-check"></i><b>2.3</b> bookdown 语法</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="howtodo.html"><a href="howtodo.html"><i class="fa fa-check"></i><b>3</b> 常用功能的实现</a><ul>
+<li class="chapter" data-level="3.1" data-path="howtodo.html"><a href="howtodo.html#如何插入参考文献"><i class="fa fa-check"></i><b>3.1</b> 如何插入参考文献</a></li>
+<li class="chapter" data-level="3.2" data-path="howtodo.html"><a href="howtodo.html#如何将参考文献格式调整为国标格式"><i class="fa fa-check"></i><b>3.2</b> 如何将参考文献格式调整为国标格式</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>参考文献</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">本书由 bookdown 强力驱动</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">实验研究的设计及分析</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="basic" class="section level1">
+<h1><span class="header-section-number">第 2 章</span> Bookdown 的基本用法</h1>
+<p>从本质上讲，bookdown 是基于 Pandoc、markdown、R、Rmarkdown、gitbook、tex、git 等等一系列开源项目上的综合性工具，这套工具大大降低了用户自己整合上述多个工具的成本，以更加高效地方式完成内容创作、发布和维护。</p>
+<div id="使用bookdown创作的流程" class="section level2">
+<h2><span class="header-section-number">2.1</span> 使用bookdown创作的流程</h2>
+<div id="初始化" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> 初始化</h3>
+<p>使用下载的模板或者bookdown自带的模板，创建bookdown项目。建议使用前者，因为更加适合中文内容的排版。</p>
+<p>当然，当用户熟悉了bookdown之后，还可以在这些模板的基础上进行必要的配置，使之更加符合用户的需求。</p>
+</div>
+<div id="编辑内容" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> 编辑内容</h3>
+<p>在合适的编辑器中（建议先使用RStudio，后期熟悉后，可使用VS Code之类的功能更为复杂的通用性编辑器），按照markdown以及Rmarkdown的语法规则，进行内容的创作和编辑。</p>
+</div>
+<div id="预览内容" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> 预览内容</h3>
+<p>选择 RStudio 中的“<code>Build Book</code>”功能，生成合适格式。还可以在控制台中键入如下命令，开启实时预览：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="basic.html#cb3-1"></a>bookdown<span class="op">::</span><span class="kw">serve_book</span>()</span></code></pre></div>
+</div>
+<div id="发布" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> 发布</h3>
+<p>利用 GitHub 或 Gitee 的 page 服务，可将生成的静态页面发布到网络。</p>
+</div>
+</div>
+<div id="bookdown-对文档的组织" class="section level2">
+<h2><span class="header-section-number">2.2</span> bookdown 对文档的组织</h2>
+<p>和一篇文章相比，一本书包含多个章节。在bookdown中，一个章节对应一个后缀名为<code>.Rmd</code>的 R Markdown 文件，每个 R Markdown 文件（除了首页）都必须以一级标题开头。例如：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb4-1"><a href="basic.html#cb4-1"></a><span class="fu"># bookdown 对书本文档的组织</span></span></code></pre></div>
+<p>默认情况下，bookdown 按照文件名的顺序，从前到后合并在一起，并渲染成gitbook格式或者pdf、epub或者word文件。</p>
+<p>如果存在<code>index.Rmd</code>文件，则该文件会被渲染成<code>index.html</code>。以下划线开头的文件，会被bookdown忽略。</p>
+<p>bookdown 还提供了自定义章节顺序的机制。在配置文件<code>_bookdown.yml</code>中，通过<code>rmd_files</code>字段实现，例如：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb5-1"><a href="basic.html#cb5-1"></a><span class="fu">rmd_files</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;index.Rmd&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;abstract.Rmd&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;intro.Rmd&quot;</span><span class="kw">]</span></span></code></pre></div>
+<p>还可以分别为不同格式指定包含的内容：</p>
+<pre><code>rmd_files:
+  html: [&quot;index.Rmd&quot;, &quot;abstract.Rmd&quot;, &quot;intro.Rmd&quot;]
+  latex: [&quot;abstract.Rmd&quot;, &quot;intro.Rmd&quot;]</code></pre>
+<p>必须要指出的是，每个章节的一级标题后，需要在后面加上标签，如：</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="basic.html#cb7-1"></a><span class="fu"># Bookdown 的基本用法 {#basic}</span></span></code></pre></div>
+</div>
+<div id="bookdown-语法" class="section level2">
+<h2><span class="header-section-number">2.3</span> bookdown 语法</h2>
+<p>首先，bookdown是基于markdown和pandoc的工具，因此，<a href="https://daringfireball.net/projects/markdown/syntax">Markdown 的原生语法</a>肯定是可以使用的。在此不再赘述。</p>
+<p>其次，<a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Pandoc 在markdown语法的基础上，提供了一些增强</a>，bookdown也是支持的。</p>
+<p>最后，bookdown 是在 <a href="https://rmarkdown.rstudio.com/index.html">R bookdown 包</a>的基础上进行扩展，故而也支持 R Markdown 语法。如：</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="basic.html#cb8-1"></a><span class="kw">dim</span>(iris)</span></code></pre></div>
+<pre><code>## [1] 150   5</code></pre>
+<p>再如，下面的代码将列出R Markdown支持的所有语言：</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="basic.html#cb10-1"></a><span class="kw">names</span>(knitr<span class="op">::</span>knit_engines<span class="op">$</span><span class="kw">get</span>())</span></code></pre></div>
+<pre><code>##  [1] &quot;awk&quot;         &quot;bash&quot;        &quot;coffee&quot;      &quot;gawk&quot;        &quot;groovy&quot;     
+##  [6] &quot;haskell&quot;     &quot;lein&quot;        &quot;mysql&quot;       &quot;node&quot;        &quot;octave&quot;     
+## [11] &quot;perl&quot;        &quot;psql&quot;        &quot;Rscript&quot;     &quot;ruby&quot;        &quot;sas&quot;        
+## [16] &quot;scala&quot;       &quot;sed&quot;         &quot;sh&quot;          &quot;stata&quot;       &quot;zsh&quot;        
+## [21] &quot;highlight&quot;   &quot;Rcpp&quot;        &quot;tikz&quot;        &quot;dot&quot;         &quot;c&quot;          
+## [26] &quot;fortran&quot;     &quot;fortran95&quot;   &quot;asy&quot;         &quot;cat&quot;         &quot;asis&quot;       
+## [31] &quot;stan&quot;        &quot;block&quot;       &quot;block2&quot;      &quot;js&quot;          &quot;css&quot;        
+## [36] &quot;sql&quot;         &quot;go&quot;          &quot;python&quot;      &quot;julia&quot;       &quot;sass&quot;       
+## [41] &quot;scss&quot;        &quot;theorem&quot;     &quot;lemma&quot;       &quot;corollary&quot;   &quot;proposition&quot;
+## [46] &quot;conjecture&quot;  &quot;definition&quot;  &quot;example&quot;     &quot;exercise&quot;    &quot;proof&quot;      
+## [51] &quot;remark&quot;      &quot;solution&quot;</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="howtodo.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/yangjh-xbmu/bookdown/edit/master/basic.Rmd",
+"text": "编辑"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown.pdf", "bookdown.epub"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
