@@ -1,7 +1,7 @@
 --- 
 title: "实验研究的设计及分析"
 author: "杨志宏"
-date: "2019-12-01"
+date: "2019-12-02"
 output: pdf_document
 bibliography:
 - book.bib

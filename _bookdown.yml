@@ -8,6 +8,6 @@ language:
     edit: "编辑"
     chapter_name: ["第 ", " 章"]
 output_dir: "docs"
-rmd_files: ["index.Rmd", "introduction.Rmd", "refer.Rmd"]
+rmd_files: ["index.Rmd", "introduction.Rmd", "basic.Rmd", "refer.Rmd"]
 delete_merged_file: true
 new_session: true
