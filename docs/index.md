@@ -1,8 +1,11 @@
---- 
+---
 title: "实验研究的设计及分析"
 author: "杨志宏"
-date: "2019-12-04"
-output: pdf_document
+date: "2019-12-10"
+site: bookdown::bookdown_site
+output:
+  html_document:
+    df_print: paged
 bibliography:
 - book.bib
 - packages.bib
@@ -19,8 +22,7 @@ link-citations: yes
 lof: yes
 lot: yes
 colorlinks: yes
-site: bookdown::bookdown_site
-biblio-style: "GBT7714-2005"
+biblio-style: GBT7714-2005
 ---
 
 
@@ -61,8 +63,3 @@ sessionInfo()
 ## [10] knitr_1.26      stringr_1.4.0   xfun_0.11      
 ## [13] digest_0.6.23   rlang_0.4.2     evaluate_0.14
 ```
-
-
-\BeginKnitrBlock{flushright}<p class="flushright">杨志宏  
-于 世界之最温暖处</p>\EndKnitrBlock{flushright}
-

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>实验研究的设计及分析</title>
+  <title>第 4 章 两因素实验设计 | 实验研究的设计及分析</title>
   <meta name="description" content="介绍Bookdown的使用，记录遇到的问题及解决办法。" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="实验研究的设计及分析" />
+  <meta property="og:title" content="第 4 章 两因素实验设计 | 实验研究的设计及分析" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="yangjh-xbmu/experimentaldesign" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="实验研究的设计及分析" />
+  <meta name="twitter:title" content="第 4 章 两因素实验设计 | 实验研究的设计及分析" />
   
   <meta name="twitter:description" content="介绍Bookdown的使用，记录遇到的问题及解决办法。" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="intro.html"/>
+<link rel="prev" href="onedouble.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -219,48 +219,220 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">实验研究的设计及分析</h1>
-<p class="author"><em>杨志宏</em></p>
-<p class="date"><em>2019-12-10</em></p>
+<div id="towfactors" class="section level1">
+<h1><span class="header-section-number">第 4 章</span> 两因素实验设计</h1>
+<p>多因素实验设计不仅可以探讨各个自变量的作用，还可以探讨多个因素之间的交互作用，故而获得更多的信息，实验效率也更高。</p>
+<div id="两因素完全随机实验设计" class="section level2">
+<h2><span class="header-section-number">4.1</span> 两因素完全随机实验设计</h2>
+<blockquote>
+<p>文章类型与句子长度对学生阅读理解能力有影响</p>
+</blockquote>
+<div id="前提条件" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> 前提条件</h3>
+<ol style="list-style-type: decimal">
+<li>因变量在每个实验单元内部都为正态分布，否则要求每个单元格15人以上才可以提高方差分析结果的可信度。</li>
+<li>因变量在所有实验单元内方差齐性，否则分析结果不可信。</li>
+<li>因变量在各个实验单元内相互独立，否则分析结果不可信。</li>
+<li>因变量应该为连续性变量。</li>
+</ol>
 </div>
-<div id="前言" class="section level1 unnumbered">
-<h1>前言</h1>
-<p>在这本小书中，我将介绍控制实验的研究设计和数据分析。多因素实验设计是当前研究发展的趋势，它可在一定程度上克服早期实验室和现场研究的局限性，使实验研究更加深入，可探索更加复杂的现象，同时使研究结果更加精确、可靠。</p>
-<p>同时，实验设计也是一本技术，它包括实验设计、统计分析和计算机数据处理三方面的知识，缺一不可。</p>
-<p>以下是我的 R 进程信息：</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1"></a><span class="kw">sessionInfo</span>()</span></code></pre></div>
-<pre><code>## R version 3.6.1 (2019-07-05)
-## Platform: x86_64-apple-darwin15.6.0 (64-bit)
-## Running under: macOS Catalina 10.15.1
-## 
-## Matrix products: default
-## BLAS:   /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.dylib
-## LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
-## 
-## locale:
-## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## attached base packages:
-## [1] stats     graphics  grDevices utils     datasets 
-## [6] methods   base     
-## 
-## loaded via a namespace (and not attached):
-##  [1] compiler_3.6.1  magrittr_1.5    bookdown_0.16  
-##  [4] tools_3.6.1     htmltools_0.4.0 yaml_2.2.0     
-##  [7] Rcpp_1.0.3      stringi_1.4.3   rmarkdown_1.18 
-## [10] knitr_1.26      stringr_1.4.0   xfun_0.11      
-## [13] digest_0.6.23   rlang_0.4.2     evaluate_0.14</code></pre>
+<div id="统计分析思路" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> 统计分析思路</h3>
+<ol style="list-style-type: decimal">
+<li>检验A因素的主效应。</li>
+<li>检验B因素的主效应。</li>
+<li>检验A*B的交互效应。</li>
+<li>当交互效应显著时，需要进一步做简单效应的检验。</li>
+</ol>
+</div>
+<div id="spss中的实现" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> SPSS中的实现</h3>
+<p><a href="data/2factors-random.sav">练习数据</a></p>
+<ol style="list-style-type: decimal">
+<li>定义A、B以及因变量，输入数据。</li>
+<li>选择分析下的一般线性模型，再选单因变量方差分析。</li>
+<li>根据研究假设，分别确定因变量和固定变量。</li>
+<li>点击图，选定A为横坐标，B为独立拆线，或者相反，或者两者组合。</li>
+<li>选择事后比较，对B的三个水平进行多重比较，在假设方差齐性的方法中，勾选tukey法，在不齐性的方法中任选一个。在多因素方差分析中，如果某因素主效应显著，而其他交互效应不显著时，应该进行各因素水平之间均数的多重比较。而当交互效应显著时，则进行简单效应检验，而无需进行多重比较。</li>
+<li>在选项对话框中，选择描述性统计、效应度检验、统计检验力检验、方差齐性检验。</li>
+<li>执行分析程序。</li>
+</ol>
+<p>如果a*b存在交互效应，还需要进行简单效应检验。由于spss没有提供进行简单效应检验的菜单，需要运行程序语句实现。</p>
+<p>在原来语句的基础上：</p>
+<pre><code>UNIANOVA 成绩 BY 文章类型 句子长度 
+  /METHOD=SSTYPE(3) 
+  /INTERCEPT=INCLUDE 
+  /POSTHOC=句子长度(TUKEY) 
+  /PLOT=PROFILE(文章类型*句子长度) TYPE=LINE ERRORBAR=NO MEANREFERENCE=NO YAXIS=AUTO 
+  /PRINT ETASQ DESCRIPTIVE HOMOGENEITY OPOWER 
+  /CRITERIA=ALPHA(.05) 
+  /DESIGN=文章类型 句子长度 文章类型*句子长度.</code></pre>
+<p>修改为：</p>
+<pre><code>UNIANOVA 成绩 BY 文章类型 句子长度 
+  /METHOD=SSTYPE(3) 
+  /INTERCEPT=INCLUDE 
+  /EMMEANS = TABLES(文章类型*句子长度) COMPARE(句子长度) ADJ(SIDAK) 
+  /EMMEANS = TABLES(句子长度*文章类型) COMPARE(文章类型) ADJ(SIDAK) 
+  /CRITERIA=ALPHA(.05) 
+  /DESIGN=文章类型 句子长度 文章类型*句子长度.</code></pre>
+<p>其中，<code>/EMMEANS = TABLES(a*b) COMPARE(b) ADJ(SIDAK)</code>的功能为，在a的各水平上，检验b变量不同水平差异的显著性。</p>
+</div>
+<div id="spss-分析结果的解读" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> SPSS 分析结果的解读</h3>
+<ol style="list-style-type: decimal">
+<li>描述统计结果，计算出了因变量在各实验单元中的均值、标准差以及被试数。</li>
+<li>方差齐性检验结果，看p值。</li>
+<li>被试间效应检验结果中：
+<ol style="list-style-type: decimal">
+<li>修正模型，其平方和为a因素平方和、b因素平方和、a*b交互效应平方和之总和。</li>
+<li>截距，检验因变量的总均值是否为零。</li>
+<li>a因素主效应看p值。如果显著，说明a因素对因变量有显著影响，效应度为xxx，统计检验力为xxx。效应度=因素平方和/(因素平方和+误差平方和)。统计检验力为正确拒绝零假设的概率。</li>
+<li>b因素主效应的解读同a。</li>
+<li>a*b交互效应的显著性看p值，若显著，说明a与b对因变量有显著的交互影响，其效应度为xxx，统计检验力为xxx。</li>
+<li>总平方和为截距和校正模型之和。</li>
+<li>校正总和，代表模型所解释的变异与误差变异的总和。</li>
+</ol></li>
+<li>多重比较能够发现哪些具体的组合差异存在显著性。</li>
+<li>均值显示图，可以大致判断因素之间是否存在交互效应。</li>
+<li>简单效应，看a*b（成对比较）检验结果，根据p值，对具体存在的简单效应进行判断。</li>
+</ol>
+</div>
+</div>
+<div id="两因素混合实验设计" class="section level2">
+<h2><span class="header-section-number">4.2</span> 两因素混合实验设计</h2>
+<p>混合实验是最常用的多因素实验设计类型，它既不像完全随机实验设计需要较多的被试，也不像重复测量实验设计那样因为重复测量而存在累积效应。当有些变量适合被试内、有些变量适合被试间时，使用混合实验设计。</p>
+<div id="两因素混合实验设计的前提条件" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> 两因素混合实验设计的前提条件</h3>
+<ol style="list-style-type: decimal">
+<li>因变量在每个实验单元内部都为正态分布，否则要求每个单元格15人以上才可以提高方差分析结果的可信度。</li>
+<li>因变量在因素任意两个水平间的方差相等。备选方差分析和多元方差分析不受方差齐性的限制。</li>
+<li>样本必须从总体中随机抽取获得，被试间相互独立。</li>
+<li>多元方差分析还需要多元正态性，即每个差值变量都呈正态分布，但大样本不受限制。</li>
+<li>多元方差分析也需要样本从总体中随机抽取，且各差值之间相互独立。</li>
+</ol>
+</div>
+<div id="两因素混合实验的基本特点" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> 两因素混合实验的基本特点</h3>
+<ol style="list-style-type: decimal">
+<li>在两个自变量中，一个是被试内变量，另一个是被试间变量。</li>
+<li>相对于被试间因素的处理效应，实验者更关注被试内因素的处理效应，以及其与被试间因素之间的交互效应。</li>
+<li>被试间变量有几个水平就有几个实验组，随机选取被试，随机分配到各实验组。</li>
+</ol>
+</div>
+<div id="分析思路" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> 分析思路</h3>
+<ol style="list-style-type: decimal">
+<li>如果被试内变量b主效应显著，而a*b交互效应不显著，则应进行多重比较。（变量的水平超过2个就需要进行）</li>
+<li>如果交互效应显著，还需进行简单效应检验。</li>
+</ol>
+</div>
+<div id="两因素混合实验的spss实现" class="section level3">
+<h3><span class="header-section-number">4.2.4</span> 两因素混合实验的SPSS实现</h3>
+<ol style="list-style-type: decimal">
+<li>定义变量及输入数据。将被试间变量定义为1个变量，被试内变量按照水平分别进行定义。</li>
+<li>选择分析菜单中的一般线性模型，选择重复测量。</li>
+<li>在被试内变量名，设置被试内变量b，在定义变量水平数的方框中，输入b的水平数，点击添加。</li>
+<li>点击定义对话按钮，在对话框中，将a选入被试间因素中，将b的不同水平选入被试内变量中。</li>
+<li>在绘图对话框中，分别将a、b作为横坐标和独立线，添加绘图中。</li>
+<li>在选项对话框中，选择描述性统计、效应度检验、统计检验力检验、方差齐性检验。</li>
+<li>在EM对话框中，将被试内变量b选入右侧的显示均值中，选择LSD进行多重比较。</li>
+<li>点击确定，运行分析。</li>
+</ol>
+<p>如果a*b交互作用显著，还需要进行简单效应检验。分析方式同两因素完全随机。例如：</p>
+<pre><code>GLM b1 b2 b3 BY a 
+  /WSFACTOR=b 3 Polynomial 
+  /METHOD=SSTYPE(3) 
+  /EMMEANS = TABLES(a*b) COMPARE(b) ADJ(SIDAK)
+  /EMMEANS = TABLES(b*a) COMPARE(a) ADJ(SIDAK)
+  /CRITERIA=ALPHA(.05) 
+  /WSDESIGN=b 
+  /DESIGN=a.</code></pre>
+</div>
+<div id="两因素混合实验分析结果的解读" class="section level3">
+<h3><span class="header-section-number">4.2.5</span> 两因素混合实验分析结果的解读</h3>
+<ol style="list-style-type: decimal">
+<li>描述统计结果中，可以看出处理单元内的均值、标准差及被试数量。</li>
+<li>方差齐性检验，看p值进行决策（各组因变量协方差矩阵是否相等），如各实验党员内的数据大于15，则不需要考虑方差是否齐性。</li>
+<li>多元方差分析结果表，看被试内变量b的主效应是否显著，b*a的交互效应是否显著。</li>
+<li>球形检验结果如果不满足（p值小于0.05），用备选一元方差分析（Greenhouse-Geisser）与多元方差分析的结果，如果满足（p值大于0.05），可用标准一元方差分析结果。得出被试内变量b的主效应显著度、效应度和统计检验力以及b*a的显著度、效应度和统计检验力。</li>
+<li>方差齐性看p值进行决策（选择何种事后检验方法）。</li>
+<li>被试间变量主效应检验结果，根据p值，进行决策，如果显著，还需明确说明在什么水平上高。</li>
+<li>描述性统计结果和多重比较结果结合，可以看出被试内的差异，在什么组合条件下存在统计显著性。</li>
+<li>均值图，折线如果不平行，则可大致判断出两个因素之间存在交互效应</li>
+<li>a*b 简单效应检化验结果中，可以看出具体的简单效应在什么情况下存在，结合描述性统计表，进行汇报。例如：<code>在xx条件下，被试在xxx时的xxx显著高于xxx时的xxx（p=xxx）</code>。</li>
+</ol>
+</div>
+</div>
+<div id="两因素重复测量实验设计" class="section level2">
+<h2><span class="header-section-number">4.3</span> 两因素重复测量实验设计</h2>
+<p>两因素重复测量实验设计也是常用的实验设计。两因素重复测量的方差分析，能将被试间变异（个体差异引起的变异）从总变异中分离出来。由于被试需要接受多次测试，因此容易产生练习效应和疲劳效应，可通过随机材料和分阶段完成实验的方式加以改进。</p>
+<div id="两因素重复测量实验设计的前提条件" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> 两因素重复测量实验设计的前提条件</h3>
+<ol style="list-style-type: decimal">
+<li>因变量在每个实验单元内部都为正态分布，否则要求每个单元格15人以上才可以提高方差分析结果的可信度。</li>
+<li>因变量在因素任意两个水平间的方差相等。备选方差分析和多元方差分析不受方差齐性的限制。</li>
+<li>样本必须从总体中随机抽取获得，被试间相互独立。</li>
+<li>多元方差分析还需要多元正态性，即每个差值变量都呈正态分布，但大样本不受限制。</li>
+<li>多元方差分析也需要样本从总体中随机抽取，且各差值之间相互独立。</li>
+</ol>
+</div>
+<div id="两因素重复测量实验的基本特点" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> 两因素重复测量实验的基本特点</h3>
+<ol style="list-style-type: decimal">
+<li>在两个自变量中，均为被试内变量。</li>
+<li>如果一个自变量有p个水平，另一有q个水平，该实验就有p*q个实验处理水平的结合。</li>
+<li>只有一个实验组，随机选组N个被试，每个被试都要接受p*q次实验处理。</li>
+</ol>
+</div>
+<div id="两因素重复测量实验的spss数据分析" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> 两因素重复测量实验的SPSS数据分析</h3>
+<p><a href="data/2factors-repeat.sav">练习数据</a></p>
+<ol style="list-style-type: decimal">
+<li>定义变量及输入数据。按照实验处理水平的结合，分别定义变量名。</li>
+<li>选择分析菜单中的一般线性模型，选择重复测量。</li>
+<li>按照变量特征，定义好被试内变量a、b，点击添加。</li>
+<li>在重复测量对话框中，将结合变量名分别按顺序键入到被试内变量中。</li>
+<li>在绘图对话框中，分别将a、b作为横坐标和独立线，添加绘图中。</li>
+<li>在选项对话框中，选择描述性统计、效应度检验、统计检验力检验、方差齐性检验。</li>
+<li>在EM对话框中，将被试内变量b（水平数大于2）选入右侧的显示均值中，选择LSD进行多重比较。</li>
+<li>点击确定，运行分析。</li>
+</ol>
+<p>如果a*b交互作用显著，还需要进行简单效应检验。分析方式同两因素完全随机。例如：</p>
+<pre><code>GLM a1b1 a1b2 a1b3 a2b1 a2b2 a2b3 
+  /WSFACTOR=a 2 Polynomial b 3 Polynomial 
+  /METHOD=SSTYPE(3) 
+  /EMMEANS = TABLES(a*b) COMPARE(b) ADJ(SIDAK)
+  /EMMEANS = TABLES(b*a) COMPARE(a) ADJ(SIDAK)
+  /PRINT=DESCRIPTIVE ETASQ OPOWER HOMOGENEITY 
+  /CRITERIA=ALPHA(.05) 
+  /WSDESIGN=a b a*b.</code></pre>
+</div>
+<div id="两因素重复测量实验分析结果的解读" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> 两因素重复测量实验分析结果的解读</h3>
+<ol style="list-style-type: decimal">
+<li>描述统计结果，计算除了各个实验处理水平结合条件下的平均值、标准差及被试数。</li>
+<li>多元方差分析结果，看a、b、a*b的效应是否显著，其效应度和统计检验力分别为多少。</li>
+<li>球形检验结果如果不满足（p值小于0.05），用备选一元方差分析（Greenhouse-Geisser）与多元方差分析的结果，如果满足（p值大于0.05），可用标准一元方差分析结果。</li>
+<li>一元方差分析结果得出被试内变量的主效应显著度、效应度和统计检验力以及b*a的显著度、效应度和统计检验力。</li>
+<li>因素b各水平间的多重比较结果，需要结合描述性统计结果表，对不同水平间是否存在统计显著性差异决出决策。</li>
+<li>均值图如果有交叉趋势，可以大致判断两个因素之间存在交互效应。</li>
+<li>a*b 简单效应检验结果中，可以看出具体的简单效应在什么情况下存在，结合描述性统计表，进行汇报。例如：<code>在xx条件下，被试在xxx时的xxx显著高于xxx时的xxx（p=xxx）</code>。</li>
+</ol>
+</div>
+</div>
+<div id="小节" class="section level2">
+<h2><span class="header-section-number">4.4</span> 小节</h2>
+<p>在方差分析中，误差项越多，其数值相对越小，与其相对应的F检验就越敏感，亦即F检验的精度也就越高。据此，相对而言，两因素完全随机实验设计的精度最低，两因素混合实验设计的精度次之，两因素重复测量实验设计的精度最高。</p>
 
-
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="onedouble.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -291,7 +463,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/yangjh-xbmu/experimentaldesign/edit/master/index.Rmd",
+"link": "https://github.com/yangjh-xbmu/experimentaldesign/edit/master/04-twofactors.Rmd",
 "text": "编辑"
 },
 "history": {

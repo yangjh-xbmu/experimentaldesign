@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>第 3 章 常用功能的实现 | 实验研究的设计及分析</title>
+  <title>第 3 章 单组与双组实验设计 | 实验研究的设计及分析</title>
   <meta name="description" content="介绍Bookdown的使用，记录遇到的问题及解决办法。" />
   <meta name="generator" content="bookdown 0.16 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="第 3 章 常用功能的实现 | 实验研究的设计及分析" />
+  <meta property="og:title" content="第 3 章 单组与双组实验设计 | 实验研究的设计及分析" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="yangjh-xbmu/experimentaldesign" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="第 3 章 常用功能的实现 | 实验研究的设计及分析" />
+  <meta name="twitter:title" content="第 3 章 单组与双组实验设计 | 实验研究的设计及分析" />
   
   <meta name="twitter:description" content="介绍Bookdown的使用，记录遇到的问题及解决办法。" />
   
@@ -24,7 +24,7 @@
 <meta name="author" content="杨志宏" />
 
 
-<meta name="date" content="2019-12-01" />
+<meta name="date" content="2019-12-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="basic.html"/>
-<link rel="next" href="references.html"/>
+<link rel="next" href="towfactors.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -130,7 +130,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">bookdown使用</a></li>
+<li><a href="./">实验设计与统计分析</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>前言</a></li>
@@ -160,19 +160,43 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.4.3" data-path="intro.html"><a href="intro.html#被试间被试内和混合实验设计"><i class="fa fa-check"></i><b>1.4.3</b> 被试间、被试内和混合实验设计</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="basic.html"><a href="basic.html"><i class="fa fa-check"></i><b>2</b> Bookdown 的基本用法</a><ul>
-<li class="chapter" data-level="2.1" data-path="basic.html"><a href="basic.html#使用bookdown创作的流程"><i class="fa fa-check"></i><b>2.1</b> 使用bookdown创作的流程</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="basic.html"><a href="basic.html#初始化"><i class="fa fa-check"></i><b>2.1.1</b> 初始化</a></li>
-<li class="chapter" data-level="2.1.2" data-path="basic.html"><a href="basic.html#编辑内容"><i class="fa fa-check"></i><b>2.1.2</b> 编辑内容</a></li>
-<li class="chapter" data-level="2.1.3" data-path="basic.html"><a href="basic.html#预览内容"><i class="fa fa-check"></i><b>2.1.3</b> 预览内容</a></li>
-<li class="chapter" data-level="2.1.4" data-path="basic.html"><a href="basic.html#发布"><i class="fa fa-check"></i><b>2.1.4</b> 发布</a></li>
+<li class="chapter" data-level="2" data-path="basic.html"><a href="basic.html"><i class="fa fa-check"></i><b>2</b> 几种基本的实验设计</a><ul>
+<li class="chapter" data-level="2.1" data-path="basic.html"><a href="basic.html#单因素完全随机实验设计"><i class="fa fa-check"></i><b>2.1</b> 单因素完全随机实验设计</a></li>
+<li class="chapter" data-level="2.2" data-path="basic.html"><a href="basic.html#单因素随机区组实验设计"><i class="fa fa-check"></i><b>2.2</b> 单因素随机区组实验设计</a></li>
+<li class="chapter" data-level="2.3" data-path="basic.html"><a href="basic.html#单因素拉丁方实验设计"><i class="fa fa-check"></i><b>2.3</b> 单因素拉丁方实验设计</a></li>
+<li class="chapter" data-level="2.4" data-path="basic.html"><a href="basic.html#单因素重复测量实验设计"><i class="fa fa-check"></i><b>2.4</b> 单因素重复测量实验设计</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="basic.html"><a href="basic.html#bookdown-对文档的组织"><i class="fa fa-check"></i><b>2.2</b> bookdown 对文档的组织</a></li>
-<li class="chapter" data-level="2.3" data-path="basic.html"><a href="basic.html#bookdown-语法"><i class="fa fa-check"></i><b>2.3</b> bookdown 语法</a></li>
+<li class="chapter" data-level="3" data-path="onedouble.html"><a href="onedouble.html"><i class="fa fa-check"></i><b>3</b> 单组与双组实验设计</a><ul>
+<li class="chapter" data-level="3.1" data-path="onedouble.html"><a href="onedouble.html#单组实验设计"><i class="fa fa-check"></i><b>3.1</b> 单组实验设计</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="onedouble.html"><a href="onedouble.html#单组后测实验设计"><i class="fa fa-check"></i><b>3.1.1</b> 单组后测实验设计</a></li>
+<li class="chapter" data-level="3.1.2" data-path="onedouble.html"><a href="onedouble.html#单组前后测实验设计"><i class="fa fa-check"></i><b>3.1.2</b> 单组前后测实验设计</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="howtodo.html"><a href="howtodo.html"><i class="fa fa-check"></i><b>3</b> 常用功能的实现</a><ul>
-<li class="chapter" data-level="3.1" data-path="howtodo.html"><a href="howtodo.html#如何插入参考文献"><i class="fa fa-check"></i><b>3.1</b> 如何插入参考文献</a></li>
-<li class="chapter" data-level="3.2" data-path="howtodo.html"><a href="howtodo.html#如何将参考文献格式调整为国标格式"><i class="fa fa-check"></i><b>3.2</b> 如何将参考文献格式调整为国标格式</a></li>
+<li class="chapter" data-level="3.2" data-path="onedouble.html"><a href="onedouble.html#双组实验设计"><i class="fa fa-check"></i><b>3.2</b> 双组实验设计</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="onedouble.html"><a href="onedouble.html#双组前后测实验设计"><i class="fa fa-check"></i><b>3.2.1</b> 双组前后测实验设计</a></li>
+<li class="chapter" data-level="3.2.2" data-path="onedouble.html"><a href="onedouble.html#双组延时实验设计"><i class="fa fa-check"></i><b>3.2.2</b> 双组延时实验设计</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="towfactors.html"><a href="towfactors.html"><i class="fa fa-check"></i><b>4</b> 两因素实验设计</a><ul>
+<li class="chapter" data-level="4.1" data-path="towfactors.html"><a href="towfactors.html#两因素完全随机实验设计"><i class="fa fa-check"></i><b>4.1</b> 两因素完全随机实验设计</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="towfactors.html"><a href="towfactors.html#前提条件"><i class="fa fa-check"></i><b>4.1.1</b> 前提条件</a></li>
+<li class="chapter" data-level="4.1.2" data-path="towfactors.html"><a href="towfactors.html#统计分析思路"><i class="fa fa-check"></i><b>4.1.2</b> 统计分析思路</a></li>
+<li class="chapter" data-level="4.1.3" data-path="towfactors.html"><a href="towfactors.html#spss中的实现"><i class="fa fa-check"></i><b>4.1.3</b> SPSS中的实现</a></li>
+<li class="chapter" data-level="4.1.4" data-path="towfactors.html"><a href="towfactors.html#spss-分析结果的解读"><i class="fa fa-check"></i><b>4.1.4</b> SPSS 分析结果的解读</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="towfactors.html"><a href="towfactors.html#两因素混合实验设计"><i class="fa fa-check"></i><b>4.2</b> 两因素混合实验设计</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="towfactors.html"><a href="towfactors.html#两因素混合实验设计的前提条件"><i class="fa fa-check"></i><b>4.2.1</b> 两因素混合实验设计的前提条件</a></li>
+<li class="chapter" data-level="4.2.2" data-path="towfactors.html"><a href="towfactors.html#两因素混合实验的基本特点"><i class="fa fa-check"></i><b>4.2.2</b> 两因素混合实验的基本特点</a></li>
+<li class="chapter" data-level="4.2.3" data-path="towfactors.html"><a href="towfactors.html#分析思路"><i class="fa fa-check"></i><b>4.2.3</b> 分析思路</a></li>
+<li class="chapter" data-level="4.2.4" data-path="towfactors.html"><a href="towfactors.html#两因素混合实验的spss实现"><i class="fa fa-check"></i><b>4.2.4</b> 两因素混合实验的SPSS实现</a></li>
+<li class="chapter" data-level="4.2.5" data-path="towfactors.html"><a href="towfactors.html#两因素混合实验分析结果的解读"><i class="fa fa-check"></i><b>4.2.5</b> 两因素混合实验分析结果的解读</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="towfactors.html"><a href="towfactors.html#两因素重复测量实验设计"><i class="fa fa-check"></i><b>4.3</b> 两因素重复测量实验设计</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="towfactors.html"><a href="towfactors.html#两因素重复测量实验设计的前提条件"><i class="fa fa-check"></i><b>4.3.1</b> 两因素重复测量实验设计的前提条件</a></li>
+<li class="chapter" data-level="4.3.2" data-path="towfactors.html"><a href="towfactors.html#两因素重复测量实验的基本特点"><i class="fa fa-check"></i><b>4.3.2</b> 两因素重复测量实验的基本特点</a></li>
+<li class="chapter" data-level="4.3.3" data-path="towfactors.html"><a href="towfactors.html#两因素重复测量实验的spss数据分析"><i class="fa fa-check"></i><b>4.3.3</b> 两因素重复测量实验的SPSS数据分析</a></li>
+<li class="chapter" data-level="4.3.4" data-path="towfactors.html"><a href="towfactors.html#两因素重复测量实验分析结果的解读"><i class="fa fa-check"></i><b>4.3.4</b> 两因素重复测量实验分析结果的解读</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="towfactors.html"><a href="towfactors.html#小节"><i class="fa fa-check"></i><b>4.4</b> 小节</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>参考文献</a></li>
 <li class="divider"></li>
@@ -195,38 +219,57 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="howtodo" class="section level1">
-<h1><span class="header-section-number">第 3 章</span> 常用功能的实现</h1>
-<div id="如何插入参考文献" class="section level2">
-<h2><span class="header-section-number">3.1</span> 如何插入参考文献</h2>
-<ol style="list-style-type: decimal">
-<li><p>插入参考文献时，需要创建.bib格式的参考文献数据库。</p></li>
-<li><p>在合适的地方插入引用<span class="citation">(Xie <a href="#ref-xie2015" role="doc-biblioref">2015</a>)</span>，语法<span class="citation">(毛向樱 <a href="#ref-毛向樱2018" role="doc-biblioref">2018</a>)</span>如下：</p>
-<pre><code>引用[@xie2015]</code></pre></li>
-<li><p>单独创建一个显示全部参考文献的.Rmd文件，内容如下：</p>
-<pre><code># References {-}</code></pre></li>
-</ol>
-<p>按照上述步骤，将在章节末尾和全书末尾生成参考文献。</p>
+<div id="onedouble" class="section level1">
+<h1><span class="header-section-number">第 3 章</span> 单组与双组实验设计</h1>
+<div id="单组实验设计" class="section level2">
+<h2><span class="header-section-number">3.1</span> 单组实验设计</h2>
+<p>单组实验设计是以一组被试为实验研究对象，施加某种实验处理的实验设计。可分为单组后测实验设计和单组前后测实验设计。</p>
+<div id="单组后测实验设计" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> 单组后测实验设计</h3>
+<p>单组后测实验设计的模式如下：</p>
+<p><span class="math display">\[ X - O \]</span></p>
+<p>其中，X代表实验处理，O代表实验的后测。这种实验模式缺乏对无关变量的控制，缺少被试实验前后测量结果的对比，又由于没有对照组，难以排除无关变量的影响。</p>
 </div>
-<div id="如何将参考文献格式调整为国标格式" class="section level2">
-<h2><span class="header-section-number">3.2</span> 如何将参考文献格式调整为国标格式</h2>
-<p>在首页文件<code>index.Rmd</code>中，用户可以通过<code>biblio-style</code>指定参考文献的格式，例如：</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb14-1"><a href="howtodo.html#cb14-1"></a><span class="pp">---</span></span>
-<span id="cb14-2"><a href="howtodo.html#cb14-2"></a><span class="fu">bibliography</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;one.bib&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;another.bib&quot;</span><span class="kw">,</span><span class="at"> </span><span class="st">&quot;yet-another.bib&quot;</span><span class="kw">]</span></span>
-<span id="cb14-3"><a href="howtodo.html#cb14-3"></a><span class="fu">biblio-style</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;GBT7714-2005&quot;</span></span>
-<span id="cb14-4"><a href="howtodo.html#cb14-4"></a><span class="fu">link-citations</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb14-5"><a href="howtodo.html#cb14-5"></a><span class="pp">---</span></span></code></pre></div>
-<p>与此同时，还需要将上述文件复制到项目目录中，不过上述设定，仅对PDF和word输出时起作用，对于gitbook格式，则没有效果。</p>
+<div id="单组前后测实验设计" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> 单组前后测实验设计</h3>
+<p>单组后测实验设计的模式如下：</p>
+<p><span class="math display">\[ O_1 - X -O_2 \]</span></p>
+<p>其中，<span class="math inline">\(O_1\)</span>代表实验的前测，X代表实验处理，<span class="math inline">\(O_2\)</span>代表实验的后测。</p>
+<p>单组前后测实验设计，由于增加了一次前测，提供了一个与后测结果进行比较的参照点，故而实验的内部效度在一定程度上有了提高。但这种模式仍然难以排除被试其它特征对因变量的影响。</p>
+<p><strong>配对样本平均值的比较</strong></p>
+<p>单组前后测的实验，在进行数据分析时，需采用配对样本t检验。</p>
+<ol style="list-style-type: decimal">
+<li>数据输入时，分为前测和后测；</li>
+<li>先看相关系数及其显著性检验：相关系数不显著，说明两组数据相互独立，满足统计假设条件，可以进行配对平均值的差异性分析。</li>
+<li>再看t检验结果，决出决策。</li>
+</ol>
+<p><a href="data/prepost.sav">练习数据</a></p>
+</div>
+</div>
+<div id="双组实验设计" class="section level2">
+<h2><span class="header-section-number">3.2</span> 双组实验设计</h2>
+<p>双组实验设计是一种经常采用的实验设计方法，它是通过设置一个对照组来平衡无关因素对实验结果产生的影响，因而其结论更具说服力。双组实验设计有两种模式：双组前后测实验设计和双组延时实验设计。</p>
+<div id="双组前后测实验设计" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> 双组前后测实验设计</h3>
+<p>双组前后测实验设计的模式如下：</p>
+<p><span class="math display">\[ 
+G_1: O_1 - X_1 - O_2 \\
+G_2: O_3 - X_2 - O_4 
+\]</span></p>
+<p>其中，<span class="math inline">\(G_1\)</span>代表组1，<span class="math inline">\(G_2\)</span>代表组2。<span class="math inline">\(O_1\)</span>与<span class="math inline">\(O_2\)</span>分别代表组1的前测与后测，<span class="math inline">\(O_3\)</span>与<span class="math inline">\(O_4\)</span>分别代表组2的前测与后测，<span class="math inline">\(X_1\)</span>与<span class="math inline">\(X_2\)</span>表示不同的实验处理。</p>
+<p>该实验设计的逻辑是：在实验前后对两组进行前测，并检验前测成绩的差异，在保证两组前测成绩没有显著性差异的基础上，两组被试分别接受不同的实验处理，实验后，对两组被试进行后测，并对两组后测成绩进行差异的显著性检验，如果通过检验，那就说明，两组的差异是由于不同的实验处理造成的。</p>
+</div>
+<div id="双组延时实验设计" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> 双组延时实验设计</h3>
+<p>双组延时实验设计的模式如下：</p>
+<p><span class="math display">\[ 
+G_1: O_1 - X_1 - O_2 - O_3 \\
+G_2: O_4 - X_2 - O_5 - O_6 
+\]</span></p>
+<p>其中，<span class="math inline">\(G_1\)</span>代表组1，<span class="math inline">\(G_2\)</span>代表组2。<span class="math inline">\(O_1\)</span>、<span class="math inline">\(O_2\)</span>、<span class="math inline">\(O_3\)</span>分别代表组1的前测与后测和第二次后测，<span class="math inline">\(O_4\)</span>、<span class="math inline">\(O_5\)</span>、<span class="math inline">\(O_6\)</span>分别代表组2的前测与后测和第二次后测，<span class="math inline">\(X_1\)</span>与<span class="math inline">\(X_2\)</span>表示不同的实验处理。</p>
+<p>该模式主要用于验证实验处理是否具有延时效应。</p>
 
 </div>
-</div>
-<h3>参考文献</h3>
-<div id="refs" class="references">
-<div id="ref-xie2015">
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.</p>
-</div>
-<div id="ref-毛向樱2018">
-<p>毛向樱. 2018. “网络语言暴力及国外治理经验借鉴.” <em>武汉冶金管理干部学院学报</em> 28 (1): 25–27.</p>
 </div>
 </div>
             </section>
@@ -235,7 +278,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
         </div>
       </div>
 <a href="basic.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="towfactors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -266,7 +309,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/yangjh-xbmu/bookdown/edit/master/howtodo.Rmd",
+"link": "https://github.com/yangjh-xbmu/experimentaldesign/edit/master/03-onedoubleset.Rmd",
 "text": "编辑"
 },
 "history": {
@@ -277,7 +320,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["bookdown.pdf", "bookdown.epub"],
+"download": ["experiment.pdf", "experiment.epub"],
 "toc": {
 "collapse": "section"
 }
