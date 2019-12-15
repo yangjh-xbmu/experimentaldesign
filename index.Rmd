@@ -1,7 +1,7 @@
 ---
 title: "实验研究的设计及分析"
 author: "杨志宏"
-date: "`r Sys.Date()`"
+date: "修订于：`r Sys.Date()`"
 site: bookdown::bookdown_site
 output:
   html_document:
