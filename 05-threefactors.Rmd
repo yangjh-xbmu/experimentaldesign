@@ -278,7 +278,7 @@ GLM b1 b2 b3 BY a c
 
 ### 在 SPSS 中的实现及结果解读案例
 
-如：材料类型、有无干扰、材料显示时间对记忆能力的影响。[练习数据](data/3factors-two-repeat.sav)
+如：材料类型、有无干扰、材料显示时间对记忆能力的影响。[练习数据](data/3factors-3repeat.sav)
 
 #### 初步分析
 
